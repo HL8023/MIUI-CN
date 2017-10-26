@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MIUI官方网站</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/jquery-1.12.4.js"></script>
+
+</head>
+<body>
+
+<!--网页顶部-->
+<div class="head">
+  <div class="head_auto">
+    <a class="miui_logo" href="#">MIUI</a>
+    <p class="miui_menu">
+      <a href="index.html" class="current">首页</a>
+      <a href="MUI.html">MIUI 9</a>
+      <a href="downLoad.html">下载</a>
+      <a href="unlock.html">解锁</a>
+      <a href="luntan.html">论坛</a>
+    </p>
+  </div>
+</div>
+
+<!--网页中部-->
+<div class="content">
+  <!--轮播图-->
+  <div id="slider">
+    <div id="slider_body">
+      <ul id="oul">
+        <li><img src="images/activity_531.png" alt=""></li>
+        <li><img src="images/activity_501.png" alt=""></li>
+      </ul>
+    </div>
+    
+    <ol id="ol" class="points">
+    
+    </ol>
+  
+  </div>
+  
+  <div class="content_body_on">
+    <div class="content_body">
+      <ul class="banners">
+        <li class="banners_li">
+          <a href="#">
+            <img src="images/114223fkff0edqyfik2knf.jpg">
+            <div>
+              <h3>MIUI 9体验版内测粉丝招募</h3>
+              <p>通道已开启，邀您参与</p>
+            </div>
+          </a>
+        </li>
+        
+        <li class="banners_li">
+          <a href="#">
+            <img src="images/121817sz77oo77od13ex78.png">
+            <div>
+              <h3>MIUI 9第二批机型正式公测</h3>
+              <p>第345周更新发布</p>
+            </div>
+          </a>
+        </li>
+        
+        <li class="banners_li banners_li_last">
+          <a href="#">
+            <img src="images/170252wcq81f2mmcf3c7ce.png">
+            <div>
+              <h3>MIUI论坛APP邀您体验</h3>
+              <p>全新改版 更好玩、更好用</p>
+            </div>
+          </a>
+        </li>
+      
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  
+  //轮播图
+  // 1.获取标签
+  var oul = $('#oul')[0];
+  var ol = $('#ol')[0];
+  var index = 0;
+  var pointIndex = 0;
+  var sliderwidth = $('#slider_body').width();
+  window.onresize = function () {
+    sliderwidth = $('#slider_body').width();
+  }
+  
+  // 2.动态添加图片
+  var newChild = oul.children[0].cloneNode(true);
+  oul.appendChild(newChild);
+  var allList = oul.children;
+  // 3.动态创建指示器
+  for (var i = 0; i < allList.length - 1; i++) {
+    var li = document.createElement('li');
+    ol.appendChild(li);
+    if (i == 0) {
+      li.className = 'current';
+    }
+  }
+  // 4.鼠标点击指示器
+  $('#ol').children().each(function (i, oLi) {
+    oLi.index = i;
+    $(this).click(function () {
+      var self = this;
+      clearInterval(timer);
+      
+      $(oul).animate({
+        left: (-sliderwidth * self.index) + 'px'
+      });
+      
+      $(this).addClass('current').siblings().removeClass('current');
+      
+      pointIndex = this.index;
+    })
+  });
+  
+  // 5.添加定时器
+  var timer = setInterval(
+      autoPlay, 2000);
+  
+  //轮播图动画函数
+  function autoPlay() {
+    $(oul).animate({
+      left: -sliderwidth + "px"
+    },100, function () {
+    
+    }).delay(2000).animate({
+      left: 0
+    },100, function () {
+    
+    }).delay(2000);
+    
+    pointIndex = pointIndex == 0 ? 1 : 0;
+    $('#ol>li').eq(pointIndex).addClass('current').siblings().removeClass('current');
+  }
+  
+  // 6.鼠标放到盒子上面清空定时器
+  $('#slider').onmouseover = function () {
+    clearInterval(timer);
+  };
+  $('#slider').onmouseout = function () {
+    timer = setInterval(autoPlay, 2000);
+  };
+</script>
+
+
+<!--网页底部-->
+<div class="foot">
+  <div class="foot_body">
+    <ul class="foot_oul">
+      <li><a href="#">新浪微博</a></li>
+      <li class="weixin"><a>官方微信<img src="images/index_89.png"></a></li>
+      <li><a href="#">官方贴吧</a></li>
+      <li><a href="#">全球粉丝站</a></li>
+      <li><a href="#">隐私政策</a></li>
+      <li><a href="#">预置应用查询</a></li>
+      <li class="foot_language"><a href="#">简体中文</a>
+        <ul class="foot_li_language">
+          <li><a href="#"></a>English</li>
+          <li><a href="#"></a>繁體台湾</li>
+          <li><a href="#"></a>繁體香港</li>
+          <li><a href="#"></a>简体中文</li>
+        </ul>
+      </li>
+    
+    </ul>
+    <p>Copyright 2016 MIUI 京ICP备10046444号 | 京公网安备11010802020134号 | 京ICP证110507号</p>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

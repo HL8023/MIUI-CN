@@ -1,0 +1,802 @@
+body {
+  background-color: #f8f6f9;
+}
+
+/*顶部区域*/
+#header {
+  position: relative;
+  width: 960px;
+  height: 115px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ffe1d6;
+  box-sizing: border-box;
+}
+
+.header-left {
+  position: relative;
+  float: left;
+  line-height: 115px;
+}
+
+.header-logo {
+  width: 148px;
+  line-height: 115px;
+}
+
+.header-logo img {
+  vertical-align: middle;
+}
+
+.header-download {
+  position: relative;
+  display: inline-block;
+  width: 83px;
+  height: 21px;
+  vertical-align: middle;
+  margin-left: 20px;
+  background: url("../images/QRCode_tg.png") no-repeat;
+}
+
+.header-download span {
+  position: absolute;
+  right: 7px;
+  bottom: -47px;
+  font-size: 12px;
+  color: #fd6442;
+}
+
+.download-QRCode {
+  display: none;
+  color: #fd6442;
+  width: 185px;
+  height: 206px;
+  position: absolute;
+  z-index: 99;
+  top: 80px;
+  left: 120px;
+  border: 1px solid #fd6442;
+  background-color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.download-QRCode img {
+  margin-top: 10px;
+  width: 159px;
+  height: 159px;
+}
+
+.header-right {
+  width: 340px;
+  float: right;
+  text-align: right;
+}
+
+.header-right > .login-links {
+  width: 138px;
+  float: right;
+  line-height: 27px;
+  margin: 30px 0 5px 0;
+}
+
+.login-links li {
+  font-size: 12px;
+  float: right;
+}
+
+.login-links a.login:hover {
+  color: orangered;
+}
+
+.login-links .login span {
+  color: #ccc;
+}
+
+.login, .links {
+  color: #77767b;
+}
+
+.login, .links:hover {
+  color: #77767b;
+}
+
+.login-links .links {
+  margin-left: 10px;
+}
+
+.login-links li:nth-child(2) {
+  position: relative;
+}
+
+.links-play {
+  display: none;
+  background-color: #fff;
+  width: 120px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  top: 22px;
+  left: -30px;
+  z-index: 99;
+}
+
+.links-play li {
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 35px;
+}
+
+.links-play li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #77767b;
+}
+
+.links-play li a:hover {
+  color: #fd6442;
+}
+
+.links span {
+  display: inline-block;
+  width: 14px;
+  height: 7px;
+  background: url("../images/imghack.png") no-repeat -80px -80px;
+}
+
+.login-links .changewidth {
+  display: inline-block;
+  width: 20px;
+  height: 22px;
+  background: url("../images/imghack.png") no-repeat -22px 5px;
+}
+
+.header-search {
+  position: relative;
+  clear: both;
+  float: right;
+}
+
+.header-search > input {
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 12px;
+  color: #A0688A;
+  width: 339px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background: transparent url("../images/search_bg.png") no-repeat;
+}
+
+.header-search > a {
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+/*导航区域*/
+.nav {
+  clear: both;
+  width: 100%;
+  height: 48px;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 50;
+  background: url("../images/nv.png") repeat-x 0 0;
+  opacity: .8;
+}
+
+.nav .nav-out {
+  position: relative;
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  line-height: 46px;
+}
+
+.navbar {
+  float: left;
+  background: transparent;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li.cur {
+  background-color: #f95633;
+}
+
+.navbar li:hover {
+  background-color: #f95633;
+}
+
+.navbar li a {
+  color: #fff;
+  padding: 0 16px;
+  display: block;
+}
+
+.nav-out > .nav-tips {
+  width: 22px;
+  height: 20px;
+  background: transparent url("../images/imghack.png") no-repeat -51px -73px;
+  cursor: pointer;
+  float: right;
+  margin-top: 17px;
+}
+
+.nav-out > .tip {
+  display: none;
+  padding: 25px 0;
+  font-size: 12px;
+  position: absolute;
+  z-index: 99;
+  top: 32px;
+  right: 0;
+  border-radius: 5px;
+  width: 242px;
+  line-height: 20px;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+}
+
+.nav-out > .tip a:hover {
+  color: #999;
+  text-decoration: underline;
+}
+
+/*轮播图*/
+#banner {
+  width: 960px;
+  height: 350px;
+  border-radius: 5px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-lists {
+  position: relative;
+  width: 4000px;
+  height: 100%;
+}
+
+.banner-lists li {
+  float: left;
+}
+
+.banner-ctl {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.ctl-prev, .ctl-next {
+  display: none;
+  width: 22px;
+  height: 41px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2) url("../images/geek_4.png") no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ctl-prev {
+  background-position: 0 -82px;
+  left: 0;
+}
+
+.ctl-next {
+  background-position: -35px -3px;
+  right: 0;
+}
+
+.ctl-icon {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -35px;
+}
+
+.ctl-icon li {
+  overflow: hidden;
+  text-indent: 300px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.ctl-icon li.current {
+  background-color: #ccc;
+}
+
+/*页面主体*/
+#content {
+  width: 960px;
+  height: 4496px;
+  margin: 0 auto;
+}
+
+#content-main {
+  width: 700px;
+  height: 100%;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 5px;
+  float: left;
+}
+
+/*文章*/
+.content-box {
+  padding: 20px 35px;
+  width: 100%;
+  height: 440px;
+  box-sizing: border-box;
+}
+
+.content-box > h4 a {
+  font-size: 22px;
+  line-height: 40px;
+  color: #000;
+}
+
+.content-box > h4 a:hover {
+  color: #f00;
+}
+
+.content-box > a img {
+  width: 627px;
+  height: 240px;
+  border-radius: 5px;
+}
+
+.content-box > p {
+  font-size: 14px;
+  color: #666;
+  line-height: 22px;
+  margin-top: 20px;
+}
+
+.content-box > .detail {
+  font-size: 12px;
+  color: #c5c5c5;
+  width: 100%;
+  height: 22px;
+  margin-top: 20px;
+}
+
+.content-box > .detail a {
+  color: #c5c5c5;
+}
+
+.content-box > .detail a:hover {
+  color: #f00;
+}
+
+/*页码*/
+.content-page {
+  text-align: center;
+}
+
+.content-page > ul li {
+  display: inline-block;
+}
+
+.content-page > ul li span {
+  cursor: pointer;
+  font-size: 12px;
+  display: block;
+  width: 30px;
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-color: #fbfbfb;
+  line-height: 30px;
+}
+
+.content-page > ul li.current span,
+.content-page > ul li:nth-child(8) span {
+  cursor: auto;
+  border: none;
+}
+
+/*返回顶部*/
+#backTop {
+  display: none;
+  position: fixed;
+  right: 140px;
+  bottom: 100px;
+  width: 40px;
+  height: 40px;
+}
+
+#backTop > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/scrolltop.png") no-repeat 0 0;
+}
+
+.detail-left {
+  width: 400px;
+  height: 100%;
+  float: left;
+}
+
+.detail-left img {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+.detail-right {
+  width: 190px;
+  height: 100%;
+  float: right;
+  position: relative;
+}
+
+.detail-right > span {
+  margin-right: 15px;
+  padding-left: 20px;
+  background: url("../images/geek_2.png") no-repeat;
+}
+
+.detail-right > span:first-of-type {
+  background-position: 0 0;
+}
+
+.detail-right > span:last-of-type {
+  background-position: -68px 0;
+}
+
+.detail-right > a {
+  width: 24px;
+  height: 15px;
+  display: inline-block;
+  background: transparent url("../images/forum_3.png") no-repeat -118px -3px;
+}
+
+.detail-right > .share {
+  position: absolute;
+  right: 15px;
+  bottom: 22px;
+  width: 157px;
+  height: 41px;
+  background: url("../images/forum_4.png") no-repeat;
+  z-index: 50;
+  display: none;
+  overflow: hidden;
+}
+
+.detail-right > .share a {
+  text-indent: -300px;
+  margin-top: 5px;
+  margin-left: 15px;
+  display: inline-block;
+  height: 100%;
+  width: 28px;
+  background: url("../images/forum_3.png") no-repeat;
+}
+
+.detail-right > .share a:nth-child(1) {
+  background-position: 0 0;
+}
+
+.detail-right > .share a:nth-child(2) {
+  background-position: -43px 0;
+}
+
+.detail-right > .share a:nth-child(3) {
+  background-position: -85px 0;
+}
+
+/*页面侧栏*/
+#content-aside {
+  width: 250px;
+  height: 1567px;
+  float: right;
+}
+
+.aside-fixed a:hover,
+.aside-hot-activity a:hover,
+.aside-hot-posts a:hover,
+.aside-focus-us a:hover {
+  color: orangered;
+}
+
+/*侧栏.aside-fixed滚动触发固定*/
+.aside-fixed {
+  width: 250px;
+  position: relative;
+}
+
+.aside-fixed .newpost {
+  display: block;
+  border-radius: 5px;
+  background: url("../images/post_btn_big.png") no-repeat 0 0;
+  width: 100%;
+  height: 45px;
+}
+
+.aside-fixed .signin {
+  position: relative;
+  padding: 15px;
+  height: 96px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.aside-fixed .signin .bgimg {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  background: url("../images/signin_2.png") no-repeat 0 0;
+}
+
+.aside-fixed .signin .font {
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+.aside-fixed .signin .font span {
+  display: block;
+  margin-top: 5px;
+}
+
+.aside-fixed .MIUI-rom {
+  box-sizing: border-box;
+  padding: 15px;
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.aside-fixed .MIUI-rom h4 {
+  margin: 10px 0;
+}
+
+.aside-fixed .MIUI-rom h4 a {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+}
+
+.aside-fixed .MIUI-rom .down-links {
+  overflow: hidden;
+}
+
+.aside-fixed .MIUI-rom .down-links a {
+  width: 103px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.aside-fixed .MIUI-rom .down-links a:hover {
+  opacity: .85;
+}
+
+.aside-fixed .MIUI-rom .down-links a:first-child {
+  background-color: #2ba9fa;
+  float: left;
+}
+
+.aside-fixed .MIUI-rom .down-links a:last-child {
+  background-color: #70c041;
+  float: right;
+}
+
+.aside-fixed .section {
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.aside-fixed .section > h3 {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.aside-fixed .section > .clearfix {
+  overflow: hidden;
+}
+
+.aside-fixed .section > .clearfix li {
+  box-sizing: border-box;
+  border-top: 1px solid #e8e8e8;
+  text-align: center;
+  float: left;
+  line-height: 40px;
+  width: 50%;
+}
+
+.aside-fixed .section > .clearfix li a,
+.aside-fixed .section > .allsection {
+  color: #666;
+}
+
+.aside-fixed .section > .clearfix li a:hover,
+.aside-fixed .section > .allsection:hover {
+  color: orangered;
+}
+
+.aside-fixed .section > .allsection {
+  border-top: 1px solid #e8e8e8;
+  display: block;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+}
+
+.aside-hot-activity {
+  text-align: center;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: 1px solid #e8e8e8;
+  line-height: 38px;
+}
+
+.aside-hot-activity > h3 {
+  text-align: left;
+  line-height: 15px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.aside-hot-activity a {
+  font-size: 12px;
+  color: #666;
+}
+
+.aside-hot-posts {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e8e8e8;
+  margin-top: 10px;
+}
+
+.aside-hot-posts > h3 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.aside-hot-posts > ul {
+  margin-top: 18px;
+  width: 100%;
+}
+
+.aside-hot-posts > ul li {
+  line-height: 28px;
+
+}
+
+.aside-hot-posts > ul li a {
+  font-size: 12px;
+  color: #909090;
+}
+
+.aside-focus-us {
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.aside-focus-us > h3 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.aside-focus-us > ul {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 18px;
+}
+
+.aside-focus-us > ul li {
+  margin-bottom: 10px;
+  float: left;
+}
+
+.aside-focus-us > ul li a {
+  color: #909090;
+  text-align: center;
+  width: 70px;
+  display: inline-block;
+  font-size: 12px;
+  height: 15px;
+  box-sizing: border-box;
+  border-left: 1px solid #ccc;
+}
+
+.aside-focus-us > ul li:nth-child(1) a,
+.aside-focus-us > ul li:nth-child(4) a,
+.aside-focus-us > ul li:nth-child(7) a {
+  border: none;
+  text-align: left;
+}
+
+/*页脚区域*/
+#footer {
+  font-size: 12px;
+  color: #7e7e7e;
+  width: 100%;
+  height: 86px;
+  border-top: 1px solid #cfcdd0;
+  margin-top: 100px;
+  background-color: #302e31;
+}
+
+.foooter-outline {
+  width: 960px;
+  height: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.footer-fashao {
+  float: left;
+  width: 250px;
+}
+
+.footer-middle {
+  line-height: 23px;
+  float: left;
+
+}
+
+.footer-middle > ul {
+  margin-left: -10px;
+}
+
+.footer-middle > ul li {
+  margin-left: 10px;
+  float: left;
+}
+
+.footer-middle > ul li a {
+  display: block;
+  color: #cdcdcd;
+}
+
+.footer-middle > ul li a:hover {
+  color: #fff;
+}
+
+.footer-middle > p {
+  clear: left;
+}
+
+.footer-copyright {
+  float: right;
+}
+
